@@ -18,7 +18,7 @@ class AndroidGreetingTest {
     @Test
     fun testExample() {
         runTest{
-            val mockEngine = MockEngine { request ->
+            val mockEngine = MockEngine { _ ->
                 respond(
                     content = ByteReadChannel("""[{"name":"CTS21","flight_number":42,"success":true,"date_utc":"2021-09-15T00:00:00Z"}]"""),
                     status = HttpStatusCode.OK,
