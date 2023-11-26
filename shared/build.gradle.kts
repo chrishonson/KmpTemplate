@@ -59,6 +59,7 @@ kotlin {
         val commonTest by getting {
             dependencies {
                 implementation(libs.kotlin.test)
+                implementation(libs.ktor.client.mock)
             }
         }
     }
@@ -82,8 +83,5 @@ dependencies {
     implementation(libs.androidx.animation.android)
     implementation(libs.androidx.ui.tooling.preview.android)
     implementation(libs.androidx.ui.tooling.preview.desktop)
-    testImplementation(libs.mockk)
-    testImplementation(libs.mockk)
-    testImplementation(libs.ktor.client.mock)
     debugImplementation(libs.compose.ui.tooling.preview)
 }

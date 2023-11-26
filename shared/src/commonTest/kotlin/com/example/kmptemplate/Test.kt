@@ -2,6 +2,7 @@ package com.example.kmptemplate
 
 import Greeting
 import io.ktor.client.*
+import io.ktor.client.engine.mock.*
 import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
@@ -32,8 +33,9 @@ class CommonGreetingTest {
                     })
                 }
             }
-            assertTrue("Check 2021-09 is mentioned", Greeting(mockHttpClient).greet().contains("Greetings!"))
-
+            assertTrue {
+                "Check 2021-09 is mentioned".equals( Greeting(mockHttpClient).greet().contains("Greetings!"))
+            }
         }
     }
 }

@@ -36,7 +36,9 @@ class IosGreetingTest {
                     })
                 }
             }
-            assertTrue("Check 2021-09 is mentioned", Greeting(mockHttpClient).greet().contains("Greetings!"))
+            assertTrue {
+                "Check 2021-09 is mentioned".equals( Greeting(mockHttpClient).greet().contains("Greetings!"))
+            }
 
         }
     }
