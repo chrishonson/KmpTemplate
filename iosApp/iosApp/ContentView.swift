@@ -13,7 +13,7 @@ import UIKit
 //}
 struct ContentView: View {
     var body: some View {
-        ComposeView()
+        ComposeView()fail
                 .ignoresSafeArea(.all, edges: .bottom) // Compose has own keyboard handler
     }
 }
