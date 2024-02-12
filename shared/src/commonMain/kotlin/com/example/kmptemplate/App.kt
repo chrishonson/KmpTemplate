@@ -28,7 +28,6 @@ import org.jetbrains.compose.resources.painterResource
 @Composable
 fun App() {
     Column {
-
         var greetingText by remember { mutableStateOf("Hello, World!") }
         var showImage by remember { mutableStateOf(false) }
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
