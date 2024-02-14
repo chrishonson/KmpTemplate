@@ -84,4 +84,6 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview.android)
     implementation(libs.androidx.ui.tooling.preview.desktop)
     debugImplementation(libs.compose.ui.tooling.preview)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.compose.ui.test.preview)
 }

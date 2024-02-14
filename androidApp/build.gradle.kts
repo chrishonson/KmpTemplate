@@ -12,6 +12,7 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+        testInstrumentationRunner ="androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures {
         compose = true
@@ -45,5 +46,10 @@ dependencies {
     implementation(libs.compose.material3)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.ui.tooling.preview.android)
+    androidTestImplementation(libs.androidx.junit)
     debugImplementation(libs.compose.ui.tooling)
+    debugImplementation(libs.compose.ui.tooling.preview)
+    androidTestImplementation(libs.compose.ui.test.preview)
+
 }
