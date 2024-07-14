@@ -7,6 +7,7 @@ import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.utils.io.*
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.json.Json
 import kotlin.test.Test
@@ -14,6 +15,7 @@ import kotlin.test.assertTrue
 
 class CommonGreetingTest {
 
+    @Test
     fun testExample() {
         runTest{
             val mockEngine = MockEngine { _ ->
